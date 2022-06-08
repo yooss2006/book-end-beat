@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+@import "reset";
+
+@font-face {
+  font-family: "HancomUljuBangudae";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/HancomUljuBangudae.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Unilab";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/Unilab.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$tfont: "HancomUljuBangudae";
+
+$black: #0d0d0d;
+$gray: #d9d4c5, #a6a197, #736f68, #403e3a;
+
+//html 요소의 범위 표시
+@mixin line {
+  background-color: floralwhite;
+  outline: 1px solid red;
+}
+
+@mixin flex($a: stretch, $j: space-between, $w: nowrap) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  flex-wrap: $w;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-family: "Unilab";
+  color: $black;
+  background-color: nth($gray, 1);
+}
+
+@import "app";

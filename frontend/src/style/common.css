@@ -1,0 +1,142 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+button,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+th {
+  font-weight: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+i,
+em,
+address {
+  font-style: inherit;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+fieldset {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+textarea,
+input {
+  font-size: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.blind,
+hr,
+legend {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+q:before,
+q:after {
+  content: "";
+}
+
+@font-face {
+  font-family: "HancomUljuBangudae";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/HancomUljuBangudae.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Unilab";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/Unilab.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.hide {
+  display: none;
+}
+
+body {
+  font-family: "Unilab";
+  color: #0d0d0d;
+  background-color: #d9d4c5;
+}
+
+.App main {
+  max-width: 800px;
+  height: 500px;
+  margin: 50px auto;
+  border-radius: 3px;
+  border: 2px solid #a6a197;
+}
+.App main h1 {
+  margin: 10px 0;
+  font-size: 20px;
+  font-family: "HancomUljuBangudae";
+  text-align: center;
+}
+
+/*# sourceMappingURL=common.css.map */

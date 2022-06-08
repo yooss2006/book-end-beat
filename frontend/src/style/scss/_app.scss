@@ -1,0 +1,16 @@
+@charset "utf-8";
+.App {
+  main {
+    max-width: 800px;
+    height: 500px;
+    margin: 50px auto;
+    border-radius: 3px;
+    border: 2px solid nth($gray, 2);
+    h1 {
+      margin: 10px 0;
+      font-size: 20px;
+      font-family: $tfont;
+      text-align: center;
+    }
+  }
+}

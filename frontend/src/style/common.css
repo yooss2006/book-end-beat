@@ -121,22 +121,47 @@ q:after {
 
 body {
   font-family: "Unilab";
+  font-size: 18px;
   color: #0d0d0d;
   background-color: #d9d4c5;
 }
 
-.App main {
+.App {
   max-width: 800px;
-  height: 500px;
   margin: 50px auto;
-  border-radius: 3px;
-  border: 2px solid #a6a197;
 }
-.App main h1 {
+.App header h1 {
   margin: 10px 0;
   font-size: 20px;
   font-family: "HancomUljuBangudae";
   text-align: center;
+}
+.App header nav {
+  position: relative;
+  bottom: -2px;
+}
+.App header nav ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.App header nav ul li {
+  border-top: 2px solid #a6a197;
+  border-left: 2px solid #a6a197;
+  border-right: 2px solid #a6a197;
+  padding: 10px 30px;
+}
+.App header nav ul li.on {
+  border-bottom: 2px solid #d9d4c5;
+}
+.App header nav ul li:nth-child(2) {
+  margin: 0 30px;
+}
+.App main {
+  height: 500px;
+  border-radius: 3px;
+  border: 2px solid #a6a197;
 }
 
 /*# sourceMappingURL=common.css.map */

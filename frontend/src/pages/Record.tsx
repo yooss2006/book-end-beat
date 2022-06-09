@@ -3,7 +3,7 @@ import React from "react";
 const Record = () => {
   return (
     <section className="Record">
-      <h1>음악방</h1>
+      <h2 className="blind">음악장</h2>
     </section>
   );
 };

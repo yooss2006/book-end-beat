@@ -1,16 +1,38 @@
 @charset "utf-8";
 .App {
-  main {
-    max-width: 800px;
-    height: 500px;
-    margin: 50px auto;
-    border-radius: 3px;
-    border: 2px solid nth($gray, 2);
+  max-width: 800px;
+  margin: 50px auto;
+  header {
     h1 {
       margin: 10px 0;
       font-size: 20px;
       font-family: $tfont;
       text-align: center;
     }
+    nav {
+      position: relative;
+      bottom: -2px;
+      ul {
+        @include flex($a: center, $j: flex-start);
+        li {
+          border-top: 2px solid nth($gray, 2);
+          border-left: 2px solid nth($gray, 2);
+          border-right: 2px solid nth($gray, 2);
+          padding: 10px 30px;
+          &.on {
+            border-bottom: 2px solid nth($gray, 1);
+          }
+        }
+        li:nth-child(2) {
+          margin: 0 30px;
+        }
+      }
+    }
+  }
+
+  main {
+    height: 500px;
+    border-radius: 3px;
+    border: 2px solid nth($gray, 2);
   }
 }

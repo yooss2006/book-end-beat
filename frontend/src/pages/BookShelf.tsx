@@ -3,7 +3,7 @@ import React from "react";
 const BookShelf = () => {
   return (
     <section className="BookShelf">
-      <h1>책장</h1>
+      <h2 className="blind">책장</h2>
     </section>
   );
 };

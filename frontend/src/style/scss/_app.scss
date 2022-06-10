@@ -15,12 +15,19 @@
       ul {
         @include flex($a: center, $j: flex-start);
         li {
+          width: 100px;
           border-top: 2px solid nth($gray, 2);
           border-left: 2px solid nth($gray, 2);
           border-right: 2px solid nth($gray, 2);
-          padding: 10px 30px;
+          a {
+            display: block;
+            text-align: center;
+            line-height: 2;
+          }
           &.on {
-            border-bottom: 2px solid nth($gray, 1);
+            border-bottom: 2px solid nth($gray, 3);
+            color: white;
+            background-color: nth($gray, 3);
           }
         }
         li:nth-child(2) {
@@ -34,5 +41,6 @@
     height: 500px;
     border-radius: 3px;
     border: 2px solid nth($gray, 2);
+    background-color: nth($gray, 3);
   }
 }

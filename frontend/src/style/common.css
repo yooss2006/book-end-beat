@@ -147,13 +147,20 @@ body {
   flex-wrap: nowrap;
 }
 .App header nav ul li {
+  width: 100px;
   border-top: 2px solid #a6a197;
   border-left: 2px solid #a6a197;
   border-right: 2px solid #a6a197;
-  padding: 10px 30px;
+}
+.App header nav ul li a {
+  display: block;
+  text-align: center;
+  line-height: 2;
 }
 .App header nav ul li.on {
-  border-bottom: 2px solid #d9d4c5;
+  border-bottom: 2px solid #736f68;
+  color: white;
+  background-color: #736f68;
 }
 .App header nav ul li:nth-child(2) {
   margin: 0 30px;
@@ -162,6 +169,14 @@ body {
   height: 500px;
   border-radius: 3px;
   border: 2px solid #a6a197;
+  background-color: #736f68;
+}
+
+.BookSpace {
+  width: 90%;
+  height: 100px;
+  background-color: #d9d4c5;
+  margin: 20px auto;
 }
 
 /*# sourceMappingURL=common.css.map */

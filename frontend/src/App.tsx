@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Record from "./pages/Record";
 import "./style/common.css";
 
+import character from "./assets/character1.png";
+
 function App() {
   const [curPage, setCurPage] = useState("login");
   useEffect(() => {
@@ -13,23 +15,25 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <header>
-          <h1>로그인</h1>
-          <nav>
+        <h1 className="blind">책과 음악</h1>
+        <section className="contMember">
+          <img src={character} alt="유순상" />
+          <button className="button">logout</button>
+        </section>
+        <main>
+          <nav className="navRoom">
             <ul>
-              <li className={curPage === "bookshelf" ? "on" : ""}>
-                <a href="/bookshelf">책장</a>
-              </li>
-              <li className={curPage === "record" ? "on" : ""}>
-                <a href="/record">음악장</a>
-              </li>
-              <li className={curPage === "" ? "on" : ""}>
-                <a href="/">로그인</a>
-              </li>
+              <li>책방</li>
+              <li>음악방</li>
             </ul>
           </nav>
-        </header>
-        <main>
+          <nav className="navCondition">
+            <ul>
+              <li>전체</li>
+              <li>월 별</li>
+              <li>장르 별</li>
+            </ul>
+          </nav>
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/bookshelf" element={<BookShelf />} />

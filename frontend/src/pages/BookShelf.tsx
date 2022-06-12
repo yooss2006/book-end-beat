@@ -17,13 +17,6 @@ const BookShelf = () => {
   return (
     <section className="BookShelf">
       <h2 className="blind">책장</h2>
-      <nav>
-        <ul>
-          <li>전체</li>
-          <li>월 별</li>
-          <li>장르 별</li>
-        </ul>
-      </nav>
       <BookSpace />
     </section>
   );

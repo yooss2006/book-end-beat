@@ -1,46 +1,38 @@
 @charset "utf-8";
 .App {
-  max-width: 800px;
+  max-width: 360px;
   margin: 50px auto;
-  header {
-    h1 {
-      margin: 10px 0;
-      font-size: 20px;
-      font-family: $tfont;
-      text-align: center;
+  background-color: nth($blue, 1);
+  padding: 10px 10px;
+  box-sizing: border-box;
+  .contMember {
+    @include flex($a: center);
+    img {
+      width: 50px;
+      height: 50px;
+      background-color: nth($blue, 4);
+      border-radius: 50%;
     }
+  }
+  main {
+    margin-top: 20px;
     nav {
-      position: relative;
-      bottom: -2px;
+      margin-bottom: 15px;
       ul {
         @include flex($a: center, $j: flex-start);
         li {
-          width: 100px;
-          border-top: 2px solid nth($gray, 2);
-          border-left: 2px solid nth($gray, 2);
-          border-right: 2px solid nth($gray, 2);
-          a {
-            display: block;
-            text-align: center;
-            line-height: 2;
-          }
-          &.on {
-            border-bottom: 2px solid nth($gray, 3);
-            color: white;
-            background-color: nth($gray, 3);
-          }
+          margin-right: 10px;
+          background-color: nth($blue, 2);
+          padding: 5px 10px;
+          border-radius: 10px;
         }
-        li:nth-child(2) {
-          margin: 0 30px;
+      }
+      &.navRoom {
+        font-size: 18px;
+        li {
+          background-color: nth($blue, 3);
         }
       }
     }
-  }
-
-  main {
-    height: 500px;
-    border-radius: 3px;
-    border: 2px solid nth($gray, 2);
-    background-color: nth($gray, 3);
   }
 }

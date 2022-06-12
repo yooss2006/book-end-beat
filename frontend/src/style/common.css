@@ -121,61 +121,57 @@ q:after {
 
 body {
   font-family: "Unilab";
-  font-size: 18px;
-  color: #0d0d0d;
-  background-color: #d9d4c5;
+  color: #011640;
+  background-color: black;
 }
 
 .App {
-  max-width: 800px;
+  max-width: 360px;
   margin: 50px auto;
+  background-color: #bfcdd9;
+  padding: 10px 10px;
+  box-sizing: border-box;
 }
-.App header h1 {
-  margin: 10px 0;
-  font-size: 20px;
-  font-family: "HancomUljuBangudae";
-  text-align: center;
+.App .contMember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }
-.App header nav {
-  position: relative;
-  bottom: -2px;
+.App .contMember img {
+  width: 50px;
+  height: 50px;
+  background-color: #6093bf;
+  border-radius: 50%;
 }
-.App header nav ul {
+.App main {
+  margin-top: 20px;
+}
+.App main nav {
+  margin-bottom: 15px;
+}
+.App main nav ul {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
 }
-.App header nav ul li {
-  width: 100px;
-  border-top: 2px solid #a6a197;
-  border-left: 2px solid #a6a197;
-  border-right: 2px solid #a6a197;
+.App main nav ul li {
+  margin-right: 10px;
+  background-color: #a3bfd9;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
-.App header nav ul li a {
-  display: block;
-  text-align: center;
-  line-height: 2;
+.App main nav.navRoom {
+  font-size: 18px;
 }
-.App header nav ul li.on {
-  border-bottom: 2px solid #736f68;
-  color: white;
-  background-color: #736f68;
-}
-.App header nav ul li:nth-child(2) {
-  margin: 0 30px;
-}
-.App main {
-  height: 500px;
-  border-radius: 3px;
-  border: 2px solid #a6a197;
-  background-color: #736f68;
+.App main nav.navRoom li {
+  background-color: #79baf2;
 }
 
 .BookSpace {
   width: 90%;
   height: 100px;
-  background-color: #d9d4c5;
   margin: 20px auto;
 }
 

@@ -129,7 +129,7 @@ body {
   max-width: 360px;
   margin: 50px auto;
   background-color: #bfcdd9;
-  padding: 10px 10px;
+  padding: 0 10px;
   box-sizing: border-box;
 }
 .App .contMember {
@@ -137,6 +137,8 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  border-bottom: 2px double #6093bf;
+  padding: 10px 0;
 }
 .App .contMember img {
   width: 50px;
@@ -149,6 +151,10 @@ body {
 }
 .App main nav {
   margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .App main nav ul {
   display: flex;

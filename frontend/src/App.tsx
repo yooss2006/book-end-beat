@@ -6,12 +6,15 @@ import Record from "./pages/Record";
 import "./style/common.css";
 
 import character from "./assets/character1.png";
+import Writing from "./pages/Writing";
 
 function App() {
-  const [curPage, setCurPage] = useState("login");
-  useEffect(() => {
-    setCurPage(window.location.pathname.slice(1));
-  }, []);
+  const [recordData, setrecordData] = useState([]);
+  const [bookData, setBookData] = useState([]);
+  // const [curPage, setCurPage] = useState("login");
+  // useEffect(() => {
+  //   setCurPage(window.location.pathname.slice(1));
+  // }, []);
   return (
     <BrowserRouter>
       <div className="App">
@@ -23,20 +26,19 @@ function App() {
         <main>
           <nav className="navRoom">
             <ul>
-              <li>책방</li>
-              <li>음악방</li>
+              <li>
+                <Link to={"/book"}>책방</Link>
+              </li>
+              <li>
+                <Link to={"/record"}>음악방</Link>
+              </li>
             </ul>
           </nav>
-          <nav className="navCondition">
-            <ul>
-              <li>전체</li>
-              <li>월 별</li>
-              <li>장르 별</li>
-            </ul>
-          </nav>
+
           <Routes>
             <Route path="/" element={<Login />} />
-            <Route path="/bookshelf" element={<BookShelf />} />
+            <Route path="/book" element={<BookShelf />} />
+            <Route path="/book/writing" element={<Writing />} />
             <Route path="/record" element={<Record />} />
           </Routes>
         </main>

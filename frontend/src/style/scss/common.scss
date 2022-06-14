@@ -20,6 +20,7 @@
 
 $tfont: "HancomUljuBangudae";
 
+$black: #011640;
 $blue: #bfcdd9, #a3bfd9, #79baf2, #6093bf;
 
 //html 요소의 범위 표시
@@ -41,7 +42,7 @@ $blue: #bfcdd9, #a3bfd9, #79baf2, #6093bf;
 
 body {
   font-family: "Unilab";
-  color: #011640;
+  color: $black;
   background-color: black;
 }
 

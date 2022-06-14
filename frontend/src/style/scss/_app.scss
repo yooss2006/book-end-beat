@@ -3,10 +3,12 @@
   max-width: 360px;
   margin: 50px auto;
   background-color: nth($blue, 1);
-  padding: 10px 10px;
+  padding: 0 10px;
   box-sizing: border-box;
   .contMember {
     @include flex($a: center);
+    border-bottom: 2px double nth($blue, 4);
+    padding: 10px 0;
     img {
       width: 50px;
       height: 50px;
@@ -18,6 +20,7 @@
     margin-top: 20px;
     nav {
       margin-bottom: 15px;
+      @include flex($a: center);
       ul {
         @include flex($a: center, $j: flex-start);
         li {

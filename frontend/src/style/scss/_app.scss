@@ -3,7 +3,7 @@
   max-width: 360px;
   margin: 50px auto;
   background-color: nth($blue, 1);
-  padding: 0 10px;
+  padding: 0 10px 10px;
   box-sizing: border-box;
   .contMember {
     @include flex($a: center);

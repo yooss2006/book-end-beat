@@ -129,7 +129,7 @@ body {
   max-width: 360px;
   margin: 50px auto;
   background-color: #bfcdd9;
-  padding: 0 10px;
+  padding: 0 10px 10px;
   box-sizing: border-box;
 }
 .App .contMember {
@@ -175,10 +175,53 @@ body {
   background-color: #79baf2;
 }
 
-.BookSpace {
-  width: 90%;
-  height: 100px;
-  margin: 20px auto;
+.Writing p {
+  margin-bottom: 5px;
+}
+.Writing p::after {
+  content: ":";
+  margin-left: 5px;
+}
+.Writing input.search {
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  font-family: "HancomUljuBangudae";
+  border-radius: 5px;
+  border: none;
+}
+
+.DataLIst {
+  margin: 5px 0;
+  background-color: white;
+  border-radius: 5px;
+}
+.DataLIst li {
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.DataLIst li img {
+  width: 40px;
+  margin-right: 10px;
+}
+.DataLIst li h3 {
+  font-family: "HancomUljuBangudae";
+}
+.DataLIst li dl {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.DataLIst li dl dt {
+  margin-right: 5px;
+}
+.DataLIst li dl dt::after {
+  content: ":";
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=common.css.map */

@@ -1,9 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import DataList from "../components/DataList";
+import { BookAPIData, BookFilterData } from "../type";
 
 const Writing = () => {
   const [textData, setTextData] = useState("");
+  const [temporaryData, setTemporaryData] = useState<BookFilterData[]>([]);
 
   const LoadBookData = () => {
     axios({
@@ -13,11 +15,20 @@ const Writing = () => {
       params: { target: "title", query: textData, sort: "accuracy", size: 5 },
       responseType: "json",
     }).then(function (response) {
-      const data = response.data.documents;
+      const LoadData: BookAPIData[] = response.data.documents;
+      const filterData: BookFilterData[] = LoadData.map((item) => {
+        return {
+          authors: item.authors,
+          isbn: item.isbn,
+          publisher: item.publisher,
+          title: item.title,
+          thumbnail: item.thumbnail,
+        };
+      });
+      setTemporaryData(filterData);
     });
   };
 
-  console.log(process.env.REACT_APP_KAKAO_KEY);
   useEffect(() => {
     textData && LoadBookData();
   }, [textData]);
@@ -26,16 +37,17 @@ const Writing = () => {
     <section className="Writing">
       <form action="" method="post">
         <label>
-          <p>입력</p>
+          <p>검색</p>
           <input
-            type="text"
+            type="search"
+            className="search"
             onChange={(e) => {
               setTextData(e.target.value);
             }}
             value={textData}
           />
         </label>
-        <DataList />
+        {textData && <DataList exampleData={temporaryData} />}
       </form>
     </section>
   );

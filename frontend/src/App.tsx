@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import BookShelf from "./pages/BookShelf";
 import Login from "./pages/Login";
@@ -7,14 +7,24 @@ import "./style/common.css";
 
 import character from "./assets/character1.png";
 import Writing from "./pages/Writing";
+import { BookFilterData } from "./type";
+
+export const bookEndRecordContextData = React.createContext<{
+  bookData: BookFilterData[];
+} | null>(null);
+
+export const useBookEndRecordContextData = () => {
+  const state = useContext(bookEndRecordContextData);
+  if (!state) throw new Error("state를 찾을 수 없습니다.");
+  return state;
+};
+
+let today = new Date();
 
 function App() {
   const [recordData, setrecordData] = useState([]);
   const [bookData, setBookData] = useState([]);
-  // const [curPage, setCurPage] = useState("login");
-  // useEffect(() => {
-  //   setCurPage(window.location.pathname.slice(1));
-  // }, []);
+
   return (
     <BrowserRouter>
       <div className="App">

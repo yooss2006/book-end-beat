@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+.DataLIst {
+  margin: 5px 0;
+  background-color: white;
+  border-radius: 5px;
+  li {
+    padding: 5px;
+    @include flex($a: center, $j: flex-start);
+    img {
+      width: 40px;
+      margin-right: 10px;
+    }
+    h3 {
+      font-family: $tfont;
+    }
+    dl {
+      @include flex($a: center, $j: flex-start);
+      dt {
+        margin-right: 5px;
+        &::after {
+          content: ":";
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

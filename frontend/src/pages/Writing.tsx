@@ -12,7 +12,7 @@ const Writing = () => {
       method: "get", // 통신 방식
       url: "https://dapi.kakao.com/v3/search/book",
       headers: { Authorization: `KakaoAK ${process.env.REACT_APP_KAKAO_KEY}` },
-      params: { target: "title", query: textData, sort: "accuracy", size: 5 },
+      params: { target: "title", query: textData, size: 5 },
       responseType: "json",
     }).then(function (response) {
       const LoadData: BookAPIData[] = response.data.documents;

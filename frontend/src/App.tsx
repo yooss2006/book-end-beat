@@ -22,8 +22,9 @@ export const useBookEndRecordContextData = () => {
 let today = new Date();
 
 function App() {
-  const [recordData, setrecordData] = useState([]);
-  const [bookData, setBookData] = useState([]);
+  const [data, setData] = useState([]);
+
+  const addData = () => {};
 
   return (
     <BrowserRouter>

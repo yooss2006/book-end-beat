@@ -199,29 +199,42 @@ body {
 .DataLIst li {
   padding: 5px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 }
-.DataLIst li img {
-  width: 40px;
-  margin-right: 10px;
-}
-.DataLIst li h3 {
-  font-family: "HancomUljuBangudae";
-}
-.DataLIst li dl {
+.DataLIst li .informationCont {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
 }
-.DataLIst li dl dt {
+.DataLIst li .informationCont img {
+  width: 40px;
+  margin-right: 10px;
+}
+.DataLIst li .informationCont h3 {
+  font-family: "HancomUljuBangudae";
+}
+.DataLIst li .informationCont dl {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.DataLIst li .informationCont dl dt {
   margin-right: 5px;
 }
-.DataLIst li dl dt::after {
+.DataLIst li .informationCont dl dt::after {
   content: ":";
   margin-left: 5px;
+}
+.DataLIst li .addItemBtn {
+  padding: 20px 10px;
+  background-color: #79baf2;
+  white-space: nowrap;
+  color: white;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=common.css.map */
